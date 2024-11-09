@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1, shrink-to-fit = no">
+    <!-- Bootstrap CSS -->
+    <link rel = "stylesheet" href = "css/bootstrap.min.css">
+	<link rel = "stylesheet" href = "bootstrap-4.4.1-dist/css/bootstrap.min.css">
+	<link rel = "stylesheet" href = "css/style.css">
+    <title>Сайт - электронный журнал учащихся школы №111</title>
+  </head>
+  
+  <body style="background-image:url('img/111.jpg'); background-size: 100%">
+	<header>
+		<div class = "row">
+			<div class = "col-3">
+				<img src = "img/gerb.png" width="100" height="100">
+			</div>
+			<div class="col-9">
+				<h1>Электронный журнал учащихся школы №111</h1>
+			</div>
+		</div>
+	</header>
+	
+	<div id="menu">
+	<nav class="nav nav-pills flex-column flex-sm-row">
+		<a class="flex-sm-fill text-sm-center nav-link" href="index.html">Главная страница нашей школы!</a>
+		<a class="flex-sm-fill text-sm-center nav-link" href="classes.html">Список наших классов</a>
+		<a class="flex-sm-fill text-sm-center nav-link" href="teachers.html">Наш коллектив</a>
+		<a class="flex-sm-fill text-sm-center nav-link" href="contacts.html"><u>Связь с нами</u></a>
+	</nav>
+	</div>
+	
+	<main class = "flex">
+		<p></p>
+		<h3><u>Наш адрес:</u></h3><h4>г. Иркутск, ул. Алмазная, д. 111</h4>
+		<p></p>
+		<h3><u>Для связи с нами заполните форму:</u></h3>
+		<p></p>
+		<form method = "get" action = "#" id = "form">
+			<div class = "row">
+				<div class = "col">
+					<div>
+						<p>Введите свое имя:</p>
+						<input name = "name" size = "30">
+					</div>
+				</div>
+				<div class = "col">
+					<div>
+						<p>Введите ваш номер телефона:</p>
+						<input name = "tel" size = "30">
+					</div>
+				</div>
+			<div class = "col">
+				<div>
+					<p>Введите вашу электронную почту:</p>
+					<input name = "mail" size = "30">
+				</div>
+			</div>
+			<div class = "col">
+				<div>
+					<p>Введите сообщение:</p>
+					<textarea name = "text" cols = "30" rows = "5"></textarea>
+				</div>
+			</div>
+			</div>
+			<input name = "otp" type = "submit" value = "Отправить">
+	</main>
+  </body>
+  
+  <footer>
+	Этот сайт предназначен для ознакомления с информацией о школе и для отслеживания оценок учащихся родителями
+  </footer>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- Подключение библиотеки JavaScript локально -->
+  <script src="js/bootstrap.min.js"</script>
+</html>

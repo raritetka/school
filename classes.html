@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1, shrink-to-fit = no">
+    <!-- Bootstrap CSS -->
+    <link rel = "stylesheet" href = "css/bootstrap.min.css">
+	<link rel = "stylesheet" href = "bootstrap-4.4.1-dist/css/bootstrap.min.css">
+	<link rel = "stylesheet" href = "css/style.css">
+    <title>Сайт - электронный журнал учащихся школы №111</title>
+  </head>
+  
+  <body style="background-image:url('img/111.jpg'); background-size: 100%">
+	
+	<header>
+		<div class = "row">
+			<div class = "col-3">
+				<img src = "img/gerb.png" width="100" height="100">
+			</div>
+			<div class="col-9">
+				<h1>Электронный журнал учащихся школы №111</h1>
+			</div>
+		</div>
+	</header>
+	
+	<div id="menu">
+	<nav class="nav nav-pills flex-column flex-sm-row">
+		<a class="flex-sm-fill text-sm-center nav-link" href="index.html">Главная страница нашей школы!</a>
+		<a class="flex-sm-fill text-sm-center nav-link" href="classes.html"><u>Список наших классов</u></a>
+		<a class="flex-sm-fill text-sm-center nav-link" href="teachers.html">Наш коллектив</a>
+		<a class="flex-sm-fill text-sm-center nav-link" href="contacts.html">Связь с нами</a>
+	</nav>
+	</div>
+	
+	<main class = "flex">
+		<p></p>
+		<table id = "classes">
+			<tr>
+				<td><h4><u>Начальная школа</u></h4></td>
+				<td><h4><u>Средняя школа</u></h4></td>
+				<td><h4><u>Старшая школа</u></h4></td>
+			</tr>
+			<tr>
+				<td><a href = "#"><h4>1</h4></a></td>
+				<td><a href = "#"><h4>5</h4></a></td>
+				<td><a href = "#"><h4>10</h4></a></td>
+			</tr>
+			<tr>
+				<td><a href = "#"><h4>2</h4></a></td>
+				<td><a href = "#"><h4>6</h4></a></td>
+				<td><a href = "#"><h4>11</h4></a></td>
+			</tr>
+			<tr>
+				<td><a href = "#"><h4>3</h4></a></td>
+				<td><a href = "#"><h4>7</h4></a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><a href = "#"><h4>4</h4></a></td>
+				<td><a href = "#"><h4>8</h4></a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><a href = "#"><h4>9</h4></a></td>
+				<td></td>
+			</tr>
+		</table>
+		<p></p>
+		<table id = "button">
+			<tr>
+				<td>
+					<button type = "button" class = "btn btn-primary"  id = "BtnOpen">
+						Рассчитать стоимость
+					</button>
+				</td>
+			</tr>
+		</table>
+		<!-- Модальное окно -->
+		<div id = "Modal" class = "modal">
+			<div class = "modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Расчет стоимости обучения</h5>
+					<button type="button" class="close" id = "BtnClose">
+					  <span>&times;</span>
+					</button>
+				</div>
+				<div class = "modal-body">
+					<form method = "get" action = "#" id = "orderForm">
+						<div>
+							<label class = "label" for = "name">
+								Выберите обучение:
+							</label>
+							<select id = "zn1">
+								<option value = "9" selected>год</option>
+								<option value = "4">полгода</option>
+								<option value = "1">месяц</option>
+							</select>
+							<div>
+								<div>
+									<label class = "label" for = "class">
+										Выберите класс:
+									</label>
+									<select id = "zn2">
+										<option value = "1">1</option>
+										<option value = "2">2</option>
+										<option value = "3">3</option>
+										<option value = "4">4</option>
+										<option value = "5">5</option>
+										<option value = "6">6</option>
+										<option value = "7">7</option>
+										<option value = "8">8</option>
+										<option value = "9">9</option>
+										<option value = "10">10</option>
+										<option value = "11">11</option>
+									</select>
+								</div>
+								<div>
+									<label class = "label" for = "month">
+										Питание в столовой:
+									</label>
+									<select id = "zn3">
+										<option value = "да">да</option>
+										<option value = "нет">нет</option>
+									</select>
+								</div>
+								<div>
+									<label class = "label" for = "email">
+										Ваш email:
+									</label>
+									<input type = "email" id = "zn4" class = "input-xlarge" required = "required">
+								</div>
+								<p></p>
+								<div id = "otvet">
+									<button type = "submit" class = "btn btn-primary" id = "Submit">Отправить</button>
+								</div>
+								<p id="stoim"></p>
+							</div>	
+						</div>	
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+	
+	<script>
+		// Модальное окно, его описание
+		let modal = document.getElementById("Modal"); // получение элемента по id
+		// Кнопка открытия модального окна
+		let open = document.getElementById("BtnOpen");
+		// Когда пользователь нажимает на кнопку, открывается модальное окно
+		open.onclick = function() {
+		  modal.style.display = "block";
+		};
+		// Кнопка закрытия модального окна
+		let close = document.getElementById("BtnClose");
+		// Когда пользователь нажимает на кнопку, закрывается модальное окно
+		close.onclick = function() {
+		  modal.style.display = "none";
+		};
+
+		// Расчет стоимости
+		let infa = document.getElementById("Submit");
+		infa.onclick = function() {
+			let stoim = 0;
+			let p1 = document.getElementById("zn1").value;
+			let p2 = document.getElementById("zn2").value;
+			let p3 = document.getElementById("zn3").value;
+			let p4 = document.getElementById("zn4").value;
+			// Учет срока обучения
+			if (p1 == 9) {
+				{stoim = 9;};
+			}
+			if (p1 == 4) {
+				{stoim = 4;};
+			}
+			if (p1 == 1) {
+				{stoim = 1;};
+			}
+			// Учет класса
+			if ((1 <= p2) && (p2 <= 4)) {
+				{stoim = stoim*400;};
+			}
+			if ((5 <= p2) && (p2 <= 9)) {
+				{stoim = stoim*500;};
+			}
+			if ((p2 == 10) || (p2 == 11)) {
+				{stoim = stoim*600;};
+			}
+			// Учет питания
+			if (p3 == 'да') {
+				{stoim = stoim*90;};
+			}
+			if (p3 == 'нет') {
+				{stoim = stoim*70;};
+			}
+			if (p4 == '') {
+				alert (`Введите вашу почту для того, чтобы мы могли с вами связаться :)`);
+			}
+			else {
+				// Вывод результата
+				alert ("Примерная стоимость обучения для учащегося "+p2+"-го класса равна: "+stoim+"\n"+"Подробная информация отправлена на вашу почту: "+p4);
+				modal.style.display = "none";
+			}
+		};
+	</script>
+  </body>
+  
+  <footer>
+	Этот сайт предназначен для ознакомления с информацией о школе и для отслеживания оценок учащихся родителями
+  </footer>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- Подключение библиотеки JavaScript локально -->
+  <script src="js/bootstrap.min.js"</script>
+</html>

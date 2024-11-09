@@ -1,0 +1,142 @@
+﻿/*общее*/
+header {
+	padding: 1em;
+	color: white;
+	background-color: #880000;
+	vertical-align: center;
+	width: 100%;
+}
+body {
+	font-family: Garamond;
+	position: relative;
+	font-style: normal;
+	font-size: normal;
+	font-weight: bold;
+	text-align: left;
+	padding-bottom: 510px;
+}
+.col-9{
+	display: flex;
+}
+h1{
+	margin: auto;
+}
+h3, h4 {
+	text-align: center;
+}
+.flex {
+	width: 80%;
+	margin: auto;
+}
+#menu {
+	background-color: #c97701;
+	width: 100%;
+}
+#menu a {
+	color: white;
+	text-align: center;
+	border: solid #880000 1px;
+}
+footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 1em;
+	color: white;
+	background-color: #880000;
+	text-align: center;
+}
+
+/*главная страница*/
+#dostig {
+	text-align: center;
+}
+.dost img {
+	width: 300px;
+	height: 200px;
+	padding: 5px;
+}
+.dost a {
+	color: black;
+}
+
+/*список классов*/
+table#classes {
+	text-align: center;
+	margin: auto;
+	width: 50%;
+}
+table#classes a {
+	color: black;
+}
+#button {
+	margin: auto;
+}
+.btn {
+	background-color: #880000;
+	border-color: #880000;
+	color: white;
+}
+.btn:hover {
+	background-color: #c97701;
+	border-color: #c97701;
+}
+.modal {
+  position: fixed;
+  background-color: rgba(0,0,0,0.4); /*полупрозрачный фон*/
+  width: 100%;
+}
+.modal-content {
+  margin: 15% auto; /* 15% сверху и по центру */
+  padding: 20 px;
+  width: 31%; 
+}
+#otvet {
+	text-align: center;
+}
+
+/*коллектив*/
+table#teachers {
+	text-align: center;
+	margin: auto;
+}
+table#photo {
+	margin: auto;
+}
+table#photo img {
+	width: 1000px; 
+}
+
+/*связь*/
+#form {
+	text-align: center;
+}
+
+/*уменьшение экрана*/
+@media screen and (max-width: 768px)
+{
+	/*общее*/
+	body {
+		width: 100%;
+		font-size: 16px;
+	}
+	h1 {
+		font-size: 20px;
+		text-align: right;
+	}
+	/*список классов*/
+	table#classes {
+		width: 100%;
+	}
+	.modal-content {
+	  width: 60%; 
+	}
+	/*коллектив*/
+	table#teachers td {
+		border: solid #880000 1px;
+	}
+	table#photo img {
+		width: 100%; 
+	}
+}
